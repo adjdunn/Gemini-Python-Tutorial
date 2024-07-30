@@ -2,9 +2,12 @@
 
 This repository contains the code for a chatbot built using the Gemini API and Python. It's accompanied by a YouTube video tutorial that guides you through the creation process.
 
-### Links
+### YouTube Tutorial
 
-* YouTube video tutorial: 
+Watch the full tutorial on YouTube:
+
+[![Watch the video](https://img.youtube.com/vi/CaxPa1FuHx4&t/0.jpg)](https://www.youtube.com/watch?v=CaxPa1FuHx4&t)
+
 
 ### Dependencies
 

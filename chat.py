@@ -9,6 +9,7 @@ https://ai.google.dev/gemini-api/docs/get-started/python
 
 import os
 import google.generativeai as genai
+from main import text_to_speech
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -51,19 +52,20 @@ model = genai.GenerativeModel(
   system_instruction="You are an expert at teaching science to kids. Your task is to engage in conversations about science and answer questions. Explain scientific concepts so that they are easily understandable. Use analogies and examples that are relatable. Use humor and make the conversation both educational and interesting. Ask questions so that you can better understand the user and improve the educational experience. Suggest way that these concepts can be related to the real world with observations and experiments.",
 )
 
-history = []
+
+
+chat_session = model.start_chat(
+    history=[]
+)
 
 print("Bot: Hello, how can I help you?")
 print()
+text_to_speech("Hello, how can I help you?")
 
 while True:
 
     user_input = input("You: ")
     print()
-
-    chat_session = model.start_chat(
-        history=history
-    )
 
     response = chat_session.send_message(user_input)
 
@@ -71,6 +73,7 @@ while True:
 
     print(f'Bot: {model_response}')
     print()
+    text_to_speech(model_response)
 
-    history.append({"role": "user", "parts": [user_input]})
-    history.append({"role": "model", "parts": [model_response]})
+    chat_session.history.append({"role": "user", "parts": [user_input]})
+    chat_session.history.append({"role": "model", "parts": [model_response]})
