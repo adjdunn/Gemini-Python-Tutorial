@@ -6,7 +6,7 @@ This repository contains the code for a chatbot built using the Gemini API and P
 
 Watch the full tutorial on YouTube:
 
-[![Watch the video](https://img.youtube.com/vi/CaxPa1FuHx4&t/0.jpg)](https://www.youtube.com/watch?v=CaxPa1FuHx4&t)
+[![Watch the video](https://img.youtube.com/vi/CaxPa1FuHx4/0.jpg)](https://www.youtube.com/watch?v=CaxPa1FuHx4)
 
 
 ### Dependencies
